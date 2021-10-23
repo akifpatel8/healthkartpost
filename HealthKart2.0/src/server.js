@@ -27,9 +27,9 @@ app.use("/users",searchController)
 app.use("/login",loginController)
 app.use("/signup",signupController)
 
-
+let port=process.env.PORT || 3452
 app.use("/items", itemController);
-app.listen(3452, async () => {
+app.listen(port, async () => {
   await connect();
   console.log("LIstening on port 3452");
 });
